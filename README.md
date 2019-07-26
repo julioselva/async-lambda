@@ -41,7 +41,7 @@
 5. Then, at Permissions, choose the Policy created before: 'lambda_execute'.
 6. Name it as: 'lambda_invoke_function_assume_apigw_role'.
 
-### 3. Edit the new role
+### 3. Edit the new Role trusted realtionships
 
 1. Go to: <https://console.aws.amazon.com/iam/home>
 2. Click at 'Roles' and search your new created role: 'lambda_invoke_function_assume_apigw_role'.
@@ -126,5 +126,5 @@
 1. Click at '<- Method Execution' or just click somewhere else, then back to your Async Method.
 2. Click at '⚡ TEST'.
 3. You may be able to set a Request Body, do it as you wish.
-4. Click in '⚡ Test'.
+4. Then finally test it!
 5. May be good to watch your Lambda logs rolling.
