@@ -80,7 +80,7 @@
 6. Content Handling: Passthrough.
 7. It should be working now, but giving no responses.
 
-### 6. Setup a HTTP response for your integration.
+### 6. Setup a HTTP response for your integration
 
 1. Click back at 'Resources', then at your Lambda Async method.
 2. Click at 'Integration Response'.
