@@ -7,9 +7,8 @@
 3. Edit the new Role.
 4. Create a new Resource and Method through the API Gateway.
 5. Setup your new API.
-6. Create a response model.
-7. Set the response model.
-8. Test it.
+6. Setup a HTTP response for your integration.
+7. Test it.
 
 ## Going through the steps
 
@@ -81,32 +80,7 @@
 6. Content Handling: Passthrough.
 7. It should be working now, but giving no responses.
 
-### 6. Create a response model
-
-1. In the same column where you clicked Resources before, should have an option called: 'Models'.
-2. Create a new one like the json example below.
-3. Name it as: 'async_success'.
-
-> It's using JSON Schema, so it's kind of a weird protocol.
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Empty Schema",
-  "type": "object",
-
-  "properties": {
-    "success": {
-      "type": "boolean",
-      "default": true
-    }
-  },
-
-  "required": ["success"]
-}
-```
-
-### 7. Set the response model
+### 6. Setup a HTTP response for your integration.
 
 1. Click back at 'Resources', then at your Lambda Async method.
 2. Click at 'Integration Response'.
@@ -115,13 +89,12 @@
 5. Then paste the template below, save and you are done!
 
 ```javascript
-#set($inputRoot = $input.path('$'))
 {
-  "success" : true
+  "success": true
 }
 ```
 
-### 8. Testing
+### 7. Testing
 
 1. Click at '<- Method Execution' or just click somewhere else, then back to your Async Method.
 2. Click at '⚡ TEST'.
